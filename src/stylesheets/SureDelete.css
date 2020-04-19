@@ -1,0 +1,62 @@
+#sure-delete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: blueviolet; */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sure-delete-in {
+  background-color: white;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 20px #275373;
+  animation: fade-in 0.25s ease-in;
+}
+.sd-buttons {
+  margin: 0px auto;
+  text-align: center;
+}
+.sd-hide {
+  display: none;
+}
+.sd-yes,
+.sd-no {
+  margin: 10px;
+  padding: 10px 30px;
+  border: 3px solid #275373;
+  background-color: white;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  color: #275373;
+}
+.sd-yes {
+  background-color: #275373;
+  color: white;
+}
+#sure-delete-in h3,
+.delete-message {
+  text-align: center;
+  color: #275373;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.delete-message {
+  margin: 5px;
+  font-size: 1rem;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,29 @@
+.notifications {
+  padding: 20px 40px;
+}
+.heading {
+  font-size: 3rem;
+  margin: 10px 0px;
+  color: #275373;
+}
+.heading svg {
+  margin-left: 30px;
+  max-width: 5rem;
+  vertical-align: middle;
+  fill: #e3e9ed;
+}
+@media only screen and (max-width: 768px) {
+  .heading {
+    font-size: 2.1rem;
+  }
+  .heading svg {
+    max-width: 2rem;
+    margin-left: 15px;
+  }
+  .notifications {
+    padding: 20px 20px;
+  }
+  .CodeMirror {
+    font-size: 0.8rem !important;
+  }
+}

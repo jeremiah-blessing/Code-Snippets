@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 94 94">
+  <g id="Group_37" data-name="Group 37" transform="translate(-47 -597)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="47" cy="47" r="47" transform="translate(47 597)" fill="#275373"/>
+    <path id="Icon_feather-folder" data-name="Icon feather-folder" d="M49.2,41.462a4.62,4.62,0,0,1-4.62,4.62H7.62A4.62,4.62,0,0,1,3,41.462V9.12A4.62,4.62,0,0,1,7.62,4.5h11.55l4.62,6.93H44.582a4.62,4.62,0,0,1,4.62,4.62Z" transform="translate(67.5 619)" fill="none" stroke="#9effff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Icon_awesome-code" data-name="Icon awesome-code" d="M10.049,18.432l-2.2-.638a.433.433,0,0,1-.3-.537L12.474.315a.433.433,0,0,1,.537-.3l2.2.638a.433.433,0,0,1,.3.537L10.586,18.137a.432.432,0,0,1-.537.3ZM5.941,14.389l1.567-1.672a.432.432,0,0,0-.029-.62L4.215,9.226,7.48,6.354a.429.429,0,0,0,.029-.62L5.941,4.062a.433.433,0,0,0-.613-.018L.136,8.909a.43.43,0,0,0,0,.631l5.192,4.868a.43.43,0,0,0,.613-.018Zm11.79.022,5.192-4.868a.43.43,0,0,0,0-.631L17.731,4.041a.436.436,0,0,0-.613.018L15.551,5.731a.432.432,0,0,0,.029.62l3.265,2.875L15.58,12.1a.429.429,0,0,0-.029.62l1.567,1.672a.433.433,0,0,0,.613.022Z" transform="translate(82.129 636.678)" fill="#9effff"/>
+  </g>
+</svg>

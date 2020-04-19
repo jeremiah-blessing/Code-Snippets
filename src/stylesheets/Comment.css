@@ -1,0 +1,64 @@
+.indi-comment {
+  border: 3px solid #275373;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.delete-state {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.comment-delete {
+  fill: white;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #275373;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.comment-delete path {
+  pointer-events: none;
+}
+.indi-comment:hover .comment-delete {
+  opacity: 1;
+}
+.comment-text {
+  font-weight: 700;
+  color: #275373;
+}
+.user-profile .identicon-svg {
+  min-width: 100%;
+  max-width: 100%;
+}
+.comment-text .CodeMirror {
+  height: auto !important;
+  margin-top: 15px;
+  font-size: 0.8rem !important;
+}
+.user-profile {
+  max-width: 5rem;
+  width: 5rem;
+  vertical-align: middle;
+  fill: #275373;
+  position: relative;
+}
+.user-profile-name {
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #275373;
+}
+@media only screen and (max-width: 768px) {
+  .user-profile-name {
+    bottom: -10%;
+  }
+}

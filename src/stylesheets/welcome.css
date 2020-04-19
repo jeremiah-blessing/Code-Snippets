@@ -1,0 +1,118 @@
+.welcome {
+  min-height: calc(100vh - 5rem);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: content-box;
+}
+
+.welcome-head {
+  cursor: none;
+  font-size: 5rem;
+  margin: 20px auto;
+  background: rgb(255, 157, 0);
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 157, 0, 1) 0%,
+    rgba(255, 157, 0, 1) 25%,
+    rgba(0, 149, 255, 1) 25%,
+    rgba(0, 149, 255, 1) 50%,
+    rgba(251, 148, 255, 1) 50%,
+    rgba(251, 148, 255, 1) 75%,
+    rgba(9, 165, 19, 1) 75%,
+    rgba(9, 165, 19, 1) 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradient 15s linear infinite alternate;
+  background-size: 40%;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+.welcome-subhead {
+  font-size: 2rem;
+  margin: 10px auto;
+}
+.welcome-buttons {
+  display: flex;
+  align-items: center;
+}
+.wsh span:nth-of-type(1) {
+  color: #ff9d00;
+}
+.wsh span:nth-of-type(2) {
+  color: #0095ff;
+}
+.wsh span:nth-of-type(3) {
+  color: #fb94ff;
+}
+.wsh span:nth-of-type(4) {
+  color: #09a513;
+}
+.welcome-buttons a {
+  padding: 10px 15px;
+  font-size: 2rem;
+  margin: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.1s;
+  box-shadow: 8px 8px #275373;
+  text-decoration: none;
+}
+.welcome-buttons a:hover {
+  box-shadow: 10px 10px #275373;
+}
+
+.welcome-buttons a:active {
+  box-shadow: 0px 0px #275373;
+}
+.welcome-buttons a svg {
+  margin-left: 10px;
+  vertical-align: middle;
+  pointer-events: none;
+}
+.w-b {
+  color: #275373;
+  border: 5px solid #275373;
+}
+
+.w-b svg {
+  fill: #275373;
+}
+
+@media only screen and (max-width: 768px) {
+  .welcome-head {
+    font-size: 3rem;
+  }
+  .welcome-subhead {
+    font-size: 1rem;
+    margin: 10px auto;
+  }
+  .welcome-buttons a {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+  .welcome-buttons a svg {
+    max-width: 1.3rem;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .welcome-head {
+    font-size: 2.1rem;
+    margin: 15px auto;
+  }
+  .welcome-subhead {
+    font-size: 1rem;
+    margin: 10px auto;
+  }
+}

@@ -1,0 +1,26 @@
+#add-comment {
+  width: 100%;
+  border: 3px solid #275373;
+  padding: 7px;
+  font-size: 1.4rem;
+  resize: vertical;
+  color: #275373;
+  font-weight: 700;
+  position: relative;
+}
+.code-guide {
+  color: #275373;
+  font-weight: 700;
+  font-size: 12px;
+}
+#submit-comment {
+  margin-right: auto;
+  border: 3px solid #275373;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  float: right;
+  color: white;
+  background-color: #275373;
+  cursor: pointer;
+}

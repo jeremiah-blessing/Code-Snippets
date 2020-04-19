@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
-}
+main {
+  margin-left: 8rem;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  max-width: calc(100% - 8rem);
+  /* padding: 20px; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* svg.page-icon circle {
+  fill: #e3e9ed;
+}
+svg.page-icon path {
+  fill: #275373;
+}
+svg.page-icon line {
+  stroke: #275373;
+} */
+@media only screen and (max-width: 768px) {
+  main {
+    margin: 0px;
+    max-width: 100vw;
+    margin-bottom: 7rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.SwalOwnTitle {
+  color: #275373;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
-
-.App-link {
-  color: #61dafb;
+.SwalOwnText {
+  color: #275373;
+  font-weight: 600;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SwalOwnPopup {
+  border-radius: 2px;
 }

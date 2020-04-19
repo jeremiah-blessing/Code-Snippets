@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 94 94">
+  <g id="Group_6" data-name="Group 6" transform="translate(-47 -59)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="47" cy="47" r="47" transform="translate(47 59)" fill="#275373"/>
+    <path id="Path_1" data-name="Path 1" d="M115.523,85.247v9" transform="translate(2 -4)" fill="none" stroke="#9effff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_2" data-name="Path 2" d="M115.523,85.247v9" transform="translate(207.269 -29.778) rotate(90)" fill="none" stroke="#9effff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Icon_awesome-code" data-name="Icon awesome-code" d="M23.972,43.963l-5.243-1.521a1.033,1.033,0,0,1-.7-1.281L29.756.747a1.033,1.033,0,0,1,1.281-.7L36.28,1.564a1.033,1.033,0,0,1,.7,1.281L25.252,43.258a1.03,1.03,0,0,1-1.281.7Zm-9.8-9.644,3.739-3.988a1.031,1.031,0,0,0-.069-1.478L10.056,22l7.787-6.85a1.024,1.024,0,0,0,.069-1.478L14.173,9.686a1.032,1.032,0,0,0-1.461-.043L.327,21.246a1.025,1.025,0,0,0,0,1.5L12.712,34.362a1.025,1.025,0,0,0,1.461-.043Zm28.123.052L54.682,22.759a1.025,1.025,0,0,0,0-1.5L42.3,9.634a1.041,1.041,0,0,0-1.461.043L37.1,13.665a1.031,1.031,0,0,0,.069,1.478L44.952,22l-7.787,6.85a1.024,1.024,0,0,0-.069,1.478l3.739,3.988a1.033,1.033,0,0,0,1.461.052Z" transform="translate(66.13 83.678)" fill="#9effff"/>
+  </g>
+</svg>

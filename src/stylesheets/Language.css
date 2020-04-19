@@ -1,0 +1,22 @@
+.ls-li {
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #275373;
+  background-color: white;
+  border-bottom: 2px solid #275373;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.ls-li:last-of-type {
+  border: 0px;
+}
+.ls-li:hover {
+  background-color: #275373;
+  color: white;
+}
+.ls-li svg {
+  max-width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
