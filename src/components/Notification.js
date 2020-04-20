@@ -54,7 +54,6 @@ export default class Notification extends Component {
         .doc(this.props.notificationID)
         .update({ read: true });
     } else {
-      console.log("The commented user / your snippet is deleted!");
       this.setState({
         loading: false,
         errorMessage: "[your snippet is deleted]",

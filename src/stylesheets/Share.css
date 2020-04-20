@@ -1,0 +1,49 @@
+.share-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.share-in {
+  padding: 30px;
+  background-color: white;
+  border: 2px solid #275373;
+  box-shadow: 10px 10px #275373;
+  animation: fade-in 0.25s ease-in;
+}
+.share-in-mail,
+.share-in-copy {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  border: 3px solid #275373;
+  font-size: 1rem;
+  background-color: #275373;
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.share-in-mail svg,
+.share-in-copy svg {
+  vertical-align: middle;
+  fill: white;
+  max-height: 1rem;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

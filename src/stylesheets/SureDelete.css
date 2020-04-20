@@ -13,8 +13,8 @@
 #sure-delete-in {
   background-color: white;
   padding: 15px;
-  border-radius: 3px;
-  box-shadow: 0px 0px 20px #275373;
+  border: 3px solid #275373;
+  box-shadow: 10px 10px #275373;
   animation: fade-in 0.25s ease-in;
 }
 .sd-buttons {

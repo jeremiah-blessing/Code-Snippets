@@ -47,7 +47,6 @@ export default class AddComment extends Component {
           });
         })
         .catch((error) => {
-          console.log(error.message);
           Toast.fire({
             icon: "error",
             title: error.message,

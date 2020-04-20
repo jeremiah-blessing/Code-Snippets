@@ -19,7 +19,7 @@ import firebase from "./firebaseConfig";
 import MyProfile from "./pages/MyProfile";
 
 import { AuthContext } from "./AuthContext";
-// import SnippetLoader from "./components/SnippetLoader";
+import Swal from "sweetalert2";
 
 import LanguageSelector from "./components/LanguageSelector";
 
@@ -41,10 +41,24 @@ export default class App extends Component {
   componentDidMount() {
     this.unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        console.log("APP LOGGED IN !!");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          onOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+          customClass: { title: "SwalOwnText" },
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Successfully Signed in!",
+        });
         this.handleAuthChange(true, user);
         fetchNotifications(user.uid).then((notifications) => {
-          console.log(notifications);
           const forLength = notifications.filter((notification) => {
             return !notification.read;
           });
@@ -54,7 +68,6 @@ export default class App extends Component {
           });
         });
       } else {
-        console.log("APP LOGGED OUT !!");
         this.handleAuthChange(false, null);
       }
     });

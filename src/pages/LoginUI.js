@@ -99,7 +99,7 @@ export default class LoginUI extends Component {
         this.setState({ loginText: "PLEASE WAIT..", abt: "signed in!" });
         Toast.fire({
           icon: "success",
-          title: `Successfully Signed in`,
+          title: `Successfully Signed in!`,
         });
       })
       .catch((error) => {

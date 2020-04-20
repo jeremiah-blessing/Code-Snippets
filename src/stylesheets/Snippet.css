@@ -45,7 +45,9 @@
   border-radius: 50%;
   overflow: hidden;
 }
-.snippet-author .identicon-svg {
+.snippet-share svg,
+.snippet-share path {
+  pointer-events: none;
 }
 .comments-container.sitcc {
   padding: 20px 0px;

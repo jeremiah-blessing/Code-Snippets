@@ -51,7 +51,6 @@ export default class Newsnippet extends Component {
     this.instance = null;
   }
   handleLanguageChange(details) {
-    console.log(details);
     this.setState({ language: details.language, mode: details.mode });
   }
   handleInputchange(e) {
@@ -62,9 +61,7 @@ export default class Newsnippet extends Component {
     e.target.style.height = e.target.scrollHeight + "px";
     this.setState({ [e.target.name]: e.target.value }, () => {});
   }
-  componentDidMount() {
-    console.log(this.instance);
-  }
+
   handleValidation() {
     let errorMessages = [];
     if (this.state.code === "") errorMessages.push("Code");
@@ -106,7 +103,6 @@ export default class Newsnippet extends Component {
         })
         .then(() => {
           this.setState({ buttonText: "saved!" });
-          console.log("Added snippet");
           const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
@@ -227,9 +223,7 @@ export default class Newsnippet extends Component {
                 onBeforeChange={(editor, data, code) => {
                   this.setState({ code });
                 }}
-                onChange={(editor, data, value) => {
-                  console.log(data);
-                }}
+                onChange={(editor, data, value) => {}}
                 onSelection={(editor, data) => {}}
                 editorDidMount={(editor) => {
                   this.instance = editor;

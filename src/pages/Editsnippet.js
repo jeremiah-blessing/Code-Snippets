@@ -55,10 +55,8 @@ export default class Editsnippet extends Component {
     this.setState({ [e.target.name]: e.target.value }, () => {});
   }
   componentDidMount() {
-    // console.log(this.instance);
     const { userDetails } = this.context;
     const snippetID = this.props.match.params.snippetID;
-    console.log(snippetID);
     db.collection("users")
       .doc(userDetails.uid)
       .collection("snippets")
@@ -115,9 +113,7 @@ export default class Editsnippet extends Component {
           description: s.description,
         })
         .then(() => {
-          console.log("Saved Edited snippet");
           this.setState({ buttonText: "saved", edited: true });
-          console.log("Added snippet");
           const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
@@ -210,9 +206,7 @@ export default class Editsnippet extends Component {
                 onBeforeChange={(editor, data, code) => {
                   this.setState({ code });
                 }}
-                onChange={(editor, data, value) => {
-                  console.log(data);
-                }}
+                onChange={(editor, data, value) => {}}
                 onSelection={(editor, data) => {}}
                 editorDidMount={(editor) => {
                   this.instance = editor;

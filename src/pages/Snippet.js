@@ -18,6 +18,8 @@ import db from "../firestoreInstance";
 import { AuthContext } from "../AuthContext";
 import jdenticon from "jdenticon/dist/jdenticon.min.js";
 import CommentsSection from "../components/CommentsSection";
+import Share from "../components/Share";
+import Swal from "sweetalert2";
 
 export default class Snippet extends Component {
   static contextType = AuthContext;
@@ -35,11 +37,47 @@ export default class Snippet extends Component {
       userUID: "",
       loading: true,
       deleteDialog: false,
+      shareDialog: false,
       dontexist: false,
     };
   }
   handleDelete = () => {
     alert("delete");
+  };
+  handleNativeShare = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "Code Snippets",
+          url: window.location.href,
+        })
+        .then(() => {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            onOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+            customClass: { title: "SwalOwnText" },
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Link Copied!",
+          });
+        })
+        .catch(() => {
+          this.handleShareDialog();
+        });
+    } else {
+      this.handleShareDialog();
+    }
+  };
+  handleShareDialog = () => {
+    this.setState({ shareDialog: !this.state.shareDialog });
   };
   handleDeleteDialog = () => {
     this.setState({ deleteDialog: !this.state.deleteDialog });
@@ -121,6 +159,11 @@ export default class Snippet extends Component {
       );
     return (
       <div className="snippet">
+        {this.state.shareDialog ? (
+          <Share handleClose={this.handleShareDialog} url={"dummy_url"} />
+        ) : (
+          ""
+        )}
         {this.state.deleteDialog ? (
           <SureDelete
             handleClose={this.handleDeleteDialog}
@@ -154,7 +197,10 @@ export default class Snippet extends Component {
                   {this.state.language}
                 </button>
                 {editDeleteButton}
-                <button className="snippet-share mt-2">
+                <button
+                  onClick={this.handleNativeShare}
+                  className="snippet-share mt-2"
+                >
                   <span className="sn-bt-text">Share</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
