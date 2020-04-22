@@ -1,8 +1,8 @@
 {
-  "homepage": "https://jeremiah-blessing.github.io/Code-Snippets",
   "name": "code-snippets",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://jeremiah-blessing.github.io/Code-Snippets/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
