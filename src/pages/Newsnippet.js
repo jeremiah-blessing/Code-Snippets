@@ -18,6 +18,8 @@ import "codemirror/mode/css/css";
 import "codemirror/mode/javascript/javascript";
 // import "codemirror/mode/clike/clike";
 // Import Firestore
+import firebase from "../firebaseConfig";
+import "firebase/analytics";
 import db from "../firestoreInstance";
 // Context
 import { AuthContext } from "../AuthContext";
@@ -102,6 +104,9 @@ export default class Newsnippet extends Component {
           created: new Date().toString(),
         })
         .then(() => {
+          firebase
+            .analytics()
+            .logEvent("newsnippet", { language: this.state.language });
           this.setState({ buttonText: "saved!" });
           const Toast = Swal.mixin({
             toast: true,

@@ -15,6 +15,7 @@ import fetchNotifications from "./components/fetchNotifications";
 // import Test from "./pages/Test";
 import "./App.css";
 import firebase from "./firebaseConfig";
+import "firebase/analytics";
 // import "firebase/auth";
 import MyProfile from "./pages/MyProfile";
 
@@ -53,6 +54,10 @@ export default class App extends Component {
           },
           customClass: { title: "SwalOwnText" },
         });
+        var providerId;
+        if (user.providerData.length === 0) providerId = "anonymous";
+        else providerId = user.providerData[0].providerId;
+        firebase.analytics().logEvent("login", { method: providerId });
         Toast.fire({
           icon: "success",
           title: "Successfully Signed in!",
